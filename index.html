@@ -10,6 +10,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112919622-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-112919622-1');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -86,7 +95,7 @@
 								<h2>略歴</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/banner3.jpg" alt="" /></a>
 
 							<ul>
 								<li>2013年3月 愛知県立岩倉総合高等学校 総合学科 卒業．</li>
@@ -112,8 +121,8 @@
 							<p>
 								深層ニューラルネットワーク (DNN) や深層畳み込みニューラルネットワーク (DCNN) などの深層学習はコンピュータビジョン分野において高い認識精度を達成し，
 								今日の第3次AIブームを牽引しています．同技術は，ロボティクス分野でも物体の把持位置検出やロボット動作の自動獲得など，普遍的手法として確立されつつあります．
-								所属する研究グループ「MPRG」では，ロボットの制御に必要な画像認識技術の研究や，画像認識結果を与えてロボットを制御する研究に取り組んでいます．
-								特に，私は「ロボットでの物体把持位置検出」「把持対象物体の認識」に取り組んでいます．
+								所属する研究グループ「MPRG」では，深層学習を活用したロボットの制御に必要な画像認識技術の研究や，画像認識結果を与えてロボットを制御する研究に取り組んでいます．
+								特に，私は「ロボットでの物体把持位置検出」「把持対象物体の認識」に焦点を当てて研究しています．
 							</p>
 
 							<div class="row">
@@ -124,12 +133,24 @@
 											<h3>Graspabilityを導入したDCNNによる物体把持位置検出</h3>
 										</header>
 									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/objectness-ssd.jpg" alt="" /></a>
+										<header>
+											<h3>Objectnessを導入したSSDによる未学習物体の検出</h3>
+										</header>
+									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/mt-dssd.jpg" alt="" /></a>
 										<header>
 											<h3>MT-DSSDを用いた物体と物体把持位置の同時検出</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/occlusion_det.jpg" alt="" /></a>
+										<header>
+											<h3>[共同研究] 多品種ばら積みピッキングにおける物体間の上下関係の予測</h3>
 										</header>
 									</article>
 								</div>
