@@ -218,6 +218,22 @@ input, select, textarea {
 		width: 1400px;
 	}
 
+  .container p {
+		font-size: 16px;
+		text-align: left;
+		line-height: 1.75em;
+	}
+
+	.container ul {
+		font-size: 16px;
+		text-align: left;
+	}
+
+		.container ul li {
+			line-height: 1.75em;
+			padding-bottom: 10px;
+		}
+
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
 			.container {
@@ -2246,6 +2262,13 @@ input, select, textarea {
 				background-position: center center;
 			}
 
+			#main > section.cover p {
+				font-size: 19px;
+				line-height: 2em;
+				text-align: center;
+			}
+
+
 			#main > section.one {
 				background-color: #81918E;
 				background-image: url("../../images/banner.jpg");
@@ -2260,6 +2283,18 @@ input, select, textarea {
 			}
 
 			#main > section.four {
+				background-color: #e8edec;
+			}
+
+      #main > section.five {
+				background-color: #f5fafa;
+			}
+
+			#main > section.six {
+				background-color: #ecf1f1;
+			}
+
+			#main > section.seven {
 				background-color: #e8edec;
 			}
 
