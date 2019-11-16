@@ -271,6 +271,112 @@
 		@include breakpoint('<=mobile') {
 			width: 100%;
 		}
+
+	}
+
+/* Modal Window */
+	.modal{
+		display: none;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.modal_bg{
+		background: rgba(0,0,0,0.6);
+		height: 100vh;
+		position: absolute;
+		width: 100%;
+	}
+
+	.modal_content{
+		background: #ecf1f1;
+		left: 50%;
+		padding: 40px;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 60%;
+		height: 70%;
+		overflow-y: scroll;
+
+		@include breakpoint('wide') {
+			width: 60%;
+			height: 70%;
+		}
+
+		@include breakpoint('normal') {
+			width: 60%;
+			height: 70%;
+		}
+
+		@include breakpoint('narrow') {
+			width: 70%;
+			height: 80%;
+		}
+
+		@include breakpoint('<=narrower') {
+			width: 95%;
+			height: 90%;
+		}
+
+		@include breakpoint('<=mobile') {
+			width: 95%;
+			height: 90%;
+		}
+
+		h3 {
+			font-size: 24px;
+			text-align: center;
+		}
+
+		p, a {
+			font-size: 16px;
+			text-align: left;
+			line-height: 1.75em;
+			&.right {
+				text-align: right;
+			}
+		}
+
+		ul {
+			font-size: 16px;
+			text-align: left;
+		}
+
+		ul li {
+			line-height: 1.75em;
+			padding-bottom: 10px;
+		}
+
+		img {
+			display: block;
+			margin: 10px auto;
+			height: auto;
+			width: auto;
+
+			@include breakpoint('wide') {
+				width: 60%;
+			}
+
+			@include breakpoint('normal') {
+				width: 60%;
+			}
+
+			@include breakpoint('narrow') {
+				width: 70%;
+			}
+
+			@include breakpoint('<=narrower') {
+				width: 95%;
+			}
+
+			@include breakpoint('<=mobile') {
+				width: 95%;
+			}
+
+		}
 	}
 
 /* Row */

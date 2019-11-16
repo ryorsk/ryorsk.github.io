@@ -125,40 +125,42 @@
 								特に，私は「ロボットでの物体把持位置検出」「把持対象物体の認識」に焦点を当てて研究しています．
 							</p>
 
+							<p>（各研究はクリックすると詳細が表示されます．）</a>
+
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/grasping_det.jpg" alt="" /></a>
+										<a href="" class="image fit js-modal-open" data-target="graspability"><img src="images/grasping_det.jpg" alt="" /></a>
 										<header>
-											<h3>Graspabilityを導入したDCNNによる物体把持位置検出</h3>
+											<h3><a href="" class="js-modal-open" data-target="graspability">Graspabilityを導入したDCNNによる物体把持位置検出</a></h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/objectness-ssd.jpg" alt="" /></a>
+										<a href="" class="image fit js-modal-open" data-target="objectness"><img src="images/objectness-ssd.jpg" alt="" /></a>
 										<header>
-											<h3>Objectnessを導入したSSDによる未学習物体の検出</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/mt-dssd.jpg" alt="" /></a>
-										<header>
-											<h3>MT-DSSDを用いた物体と物体把持位置の同時検出</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/occlusion_det.jpg" alt="" /></a>
-										<header>
-											<h3>[共同研究] 多品種ばら積みピッキングにおける物体間の上下関係の予測</h3>
+											<h3><a href="" class="js-modal-open" data-target="objectness">Objectnessを導入したSSDによる未学習物体の検出</a></h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/gan-da.jpg" alt="" /></a>
+										<a href="" class="image fit js-modal-open" data-target="mt_dssd"><img src="images/mt-dssd.jpg" alt="" /></a>
 										<header>
-											<h3>[共同研究] 脳腫瘍検出に向けたPGGANによるMR画像の水増し</h3>
+											<h3><a href="" class="js-modal-open" data-target="mt_dssd">MT-DSSDを用いた物体と物体把持位置の同時検出</a></h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="" class="image fit js-modal-open" data-target="occlusion_det"><img src="images/occlusion_det.jpg" alt="" /></a>
+										<header>
+											<h3><a href="" class="js-modal-open" data-target="occlusion_det">[共同研究] 多品種ばら積みピッキングにおける物体間の上下関係の予測</a></h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="" class="image fit js-modal-open" data-target="gan_da"><img src="images/gan-da.jpg" alt="" /></a>
+										<header>
+											<h3><a href="" class="js-modal-open" data-target="gan_da">[共同研究] 脳腫瘍検出に向けたPGGANによるMR画像の水増し</a></h3>
 										</header>
 									</article>
 								</div>
@@ -397,6 +399,85 @@
 
 			</div>
 
+		<!-- Modal Windows -->
+			<div id="graspability" class="modal js-modal">
+				<div class="modal_bg js-modal-close"></div>
+				<div class="modal_content">
+					<p class="right"><a class="js-modal-close" href="">閉じる</a></p>
+					<img src="images/grasping_det.jpg" alt="" />
+					<h3>Graspabilityを導入したDCNNによる物体把持位置検出</h3>
+					<p>産業用ロボットや生活支援ロボットでピッキングを実現するには，ロボットに搭載されているカメラセンサを用いて物体の画像を撮影し，
+						その物体の最適な把持位置を検出する必要があります．
+						本研究では，Deep Convolutional Neural Networkの学習過程に把持可能性 (Graspability) を導入することで，高精度な物体の把持位置検出法を実現します．
+						実験の結果，従来の物体把持位置検出法と比べて約22.8%性能が向上していることが確認できます．
+						また，本手法は10fpsで把持位置を検出できます．</p>
+				</div>
+			</div>
+
+			<div id="objectness" class="modal js-modal">
+				<div class="modal_bg js-modal-close"></div>
+				<div class="modal_content">
+					<p class="right"><a class="js-modal-close" href="">閉じる</a></p>
+					<img src="images/objectness-ssd.jpg" alt="" />
+					<h3>Objectnessを導入したSSDによる未学習物体の検出</h3>
+					<p>物流倉庫や生活空間では日々新しい物体が追加されるため，この環境で稼働するロボットには，追加されたばかりの未学習物体を検出する機能が望まれます．
+						本研究では，物体検出アルゴリズムのSingle Shot Multibox Detector (SSD) に「物体らしさ」を表すObjectnessを導入します．
+						これにより，学習データに含まれていないアイテム (未知クラスアイテム) に対して，物体であるか，そうでないかの認識が可能になります．
+						Amazon Robotics Challenge (ARC) のために作成したデータセットを用いた評価実験により，
+						提案手法は49.59%の未知クラスアイテムを検出できることを確認しました．</p>
+				</div>
+			</div>
+
+			<div id="mt_dssd" class="modal js-modal">
+				<div class="modal_bg js-modal-close"></div>
+				<div class="modal_content">
+					<p class="right"><a class="js-modal-close" href="">閉じる</a></p>
+					<img src="images/mt-dssd.jpg" alt="" />
+					<h3>MT-DSSDを用いた物体と物体把持位置の同時検出</h3>
+					<p>物流倉庫や生活空間で稼働するロボットには，多品種の物体から特定の物体を探して把持する機能が望まれます．
+						本研究では，深層学習を用いた物体検出アルゴリズムであるDeconvolutional Single Shot Detector (DSSD) をベースとして，
+						物体検出・セマンティックセグメンテーション・物体把持位置検出の3タスクを同時実行するMulti-task DSSD (MT-DSSD) を提案します．
+						DSSDから得られるマルチスケールの特徴マップに対して，従来の物体検出だけでなくセマンティックセグメンテーションを行うサブネットワーク (ブランチ)
+						および把持位置検出と当該把持位置の把持しやすさを推定するブランチを追加しました．
+						また，3タスクを同時に学習することで，各タスクの精度が向上する効果も確認できました．
+						提案手法を実際のロボットシステムに組み込んだ結果，Amazon Robotics Challenge競技用アイテムのほとんどを8割以上の精度で把持できました．
+						MT-DSSDの推論に必要な時間は300ミリ秒程度であり，把持動作のボトルネックになることはありません．</p>
+				</div>
+			</div>
+
+			<div id="occlusion_det" class="modal js-modal">
+				<div class="modal_bg js-modal-close"></div>
+				<div class="modal_content">
+					<p class="right"><a class="js-modal-close" href="">閉じる</a></p>
+					<img src="images/occlusion_det.jpg" alt="" />
+					<h3>[共同研究] 多品種ばら積みピッキングにおける物体間の上下関係の予測</h3>
+					<p>多品種ばら積みのピッキングでは，オクルージョンが発生した物体を把持する場合，他物体が上に存在するため把持に失敗することがあります．
+						これを解決するには，物体間の上下関係を予測して把持戦略を決定する必要があります．
+						本研究では，ばら積みされた物体間の上下関係を獲得するための新たなデータセットである ARC Multi-task Dataset を提案し，
+						物体間の上下関係の予測を行います．
+						また，この問題を解くためのアイデアとして，物体領域と重なった部分をセグメンテーションするOccluded Area Mask R-CNNと，
+						オクルージョンが発生している領域を補完するInterpolation Mask R-CNNも同時に提案しています．
+						オクルージョン領域を予測して，ある物体がどの物体に隠されているかを判断し，重なり順序を推定できます．</p>
+				</div>
+			</div>
+
+			<div id="gan_da" class="modal js-modal">
+				<div class="modal_bg js-modal-close"></div>
+				<div class="modal_content">
+					<p class="right"><a class="js-modal-close" href="">閉じる</a></p>
+					<img src="images/gan-da.jpg" alt="" />
+					<h3>[共同研究] 脳腫瘍検出に向けたPGGANによるMR画像の水増し</h3>
+					<p>（このプロジェクトは，MIRU2017若手プログラムにて新規研究プロポーザルを行い，最優秀研究計画賞を受賞したものです．
+						その後も実際に研究を続け，査読付きジャーナル「IEEE Access」へ採録されるに至りました．）</p>
+					<p>医用画像処理の分野では，一般的な画像処理分野よりもデータ量が遥かに少ないことから，機械学習を応用させることが困難です．
+						これを解決するには，学習用画像にアフィン変換やノイズ付与などを行いデータを水増し (Data Augmentation) することが定石です．
+						本研究では，ノイズから画像を生成するGenerative Adversarial Networks (GANs) を用いてリアルな脳MRIを生成し，水増しに用います．
+						提案手法では，非常に高解像度な画像を生成するProgressive growing of GANs (PGGAN) を用いて得られた脳MRIに対して，
+						画像の精錬を行うSimGANやM-UNITを用いて，よりリアルな脳MRIを生成します．
+						この生成画像をオリジナルの学習データに混ぜ込んで学習することで，脳腫瘍検出精度が向上しました．</p>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -404,7 +485,8 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/modalwindow.js"></script>
 
 	</body>
 </html>
