@@ -1246,6 +1246,31 @@ button,
 	.icon.brands:before {
 		font-family: 'Font Awesome 5 Brands'; }
 
+/* News box */
+.news {
+	overflow: auto;
+	height: 120px;
+	min-height: 100px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);
+	/* for IE8 */
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(255, 255, 255, 0.8) 0 0 10px 10px;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 0 10px 10px;
+	-moz-box-shadow: rgba(255, 255, 255, 0.8) 0 0 10px 10px; }
+	.news ul {
+		margin-left: 10px;
+		color: #41484c;
+		line-height: 1em;
+		list-style-type: none; }
+	.news ul li {
+		padding-bottom: 0px; }
+	.news span {
+		display: block;
+		margin-left: 25px;
+		text-align: left;
+		font-size: 25px;
+		color: #41484c; }
+
 /* Header */
 #header {
 	display: -moz-flex;
